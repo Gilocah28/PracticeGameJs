@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+  <title>Game</title>
+</head>
+<body>
+  <h3>Rock Paper Scissors</h3>
+  <p id="theResult"></p>
+
+
+  <button onclick="
+    const ramdomNumber = Math.random();
+    let computerMove = '';
+    if(ramdomNumber >= 0 && ramdomNumber < 1 / 3){
+      computerMove = 'rock';
+    } else if (ramdomNumber >= 1 / 3 && ramdomNumber < 2 / 3) {
+      computerMove = 'paper';
+    } else if(ramdomNumber >= 2 / 3 && ramdomNumber < 1){
+      computerMove = 'scissor';
+    }
+
+    let result = '';
+    if (computerMove === 'rock'){
+      result = 'Tie';
+    } else if (computerMove === 'paper'){
+      result = 'Your Lose';
+    } else if(computerMove === 'scissor'){
+      result = 'You Win';
+    }
+    // console.log(`You Pick Rock. Computer picked ${computerMove}. ${result}`);
+    const resultElement = document.getElementById('theResult');
+    resultElement.textContent = `You Pick Rock. Computer picked ${computerMove}. ${result}`;
+
+  ">Rock</button>    
+  <button onclick="
+    const ramdomNumber = Math.random();
+    let computerMove = '';
+    if(ramdomNumber >= 0 && ramdomNumber < 1 / 3){
+      computerMove = 'rock';
+    } else if (ramdomNumber >= 1 / 3 && ramdomNumber < 2 / 3) {
+      computerMove = 'paper';
+    } else if(ramdomNumber >= 2 / 3 && ramdomNumber < 1){
+      computerMove = 'scissor';
+    }
+    let result = '';
+    if (computerMove === 'rock'){
+      result = 'You Win';
+    } else if (computerMove === 'paper'){
+      result = 'Tie';
+    } else if(computerMove === 'scissor'){
+      result = 'You Lose';
+    }
+    const resultElement = document.getElementById('theResult');
+    resultElement.textContent = `You Pick Paper. Computer picked ${computerMove}. ${result}`;
+  ">Paper</button>
+  <button onclick="
+      const ramdomNumber = Math.random();
+      let computerMove = '';
+      if(ramdomNumber >= 0 && ramdomNumber < 1 / 3){
+        computerMove = 'rock';
+      } else if (ramdomNumber >= 1 / 3 && ramdomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if(ramdomNumber >= 2 / 3 && ramdomNumber < 1){
+        computerMove = 'scissor';
+      }
+      let result = '';
+      if (computerMove === 'rock'){
+        result = 'You Lose';
+      } else if (computerMove === 'paper'){
+        result = 'You Win';
+      } else if(computerMove === 'scissor'){
+        result = 'Tie';
+      }
+      const resultElement = document.getElementById('theResult');
+      resultElement.textContent = `You Pick Scrissor. Computer picked ${computerMove}. ${result}`;
+      ">Scissor</button>
+  <script>
+  </script>
+
+</body>
+</html>
